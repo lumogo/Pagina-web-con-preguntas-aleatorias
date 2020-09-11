@@ -1,0 +1,58 @@
+CREATE TABLE materias(
+clave_uea CHAR(7),
+nombre VARCHAR(40) NOT NULL,
+CONSTRAINT materias_clave_uea_pk PRIMARY KEY(clave_uea));
+
+INSERT INTO materias
+VALUES
+('2131101', "Matem&aacuteticas Discretas II"),
+('2100005', "&Aacutelgebra"),
+('2130038', "C&aacutelculo Diferencial"),
+('2130016', "Geometr&iacutea"),
+('2130034', "Prec&aacutelculo"),
+('2151103', "Fundamentos de programaci&oacuten"),
+('2155064', "Ingl&eacutes Intermedio I"),
+('2130015', "Trigonometria"),
+('2130039', "C&aacutelculo Integral"),
+('2151104', "Apanloo"),
+('2159998', "Ingl&eacutes B&aacutesico I"),
+('2155066', "Ingl&eacutes B&aacutesico III");
+
+CREATE TABLE alumnos(
+matricula CHAR(10),
+nombre VARCHAR(24) NOT NULL,
+apellido VARCHAR(24) NOT NULL,
+contrasena CHAR(10) NOT NULL,
+CONSTRAINT alumnos_matricula_pk PRIMARY KEY(matricula));
+
+INSERT INTO alumnos
+VALUES ('2163010537',"David", "Moreno","393837");
+
+CREATE TABLE profesores(
+num_empleado CHAR(10),
+nombre VARCHAR(24),
+apellido VARCHAR(24),
+contrasena CHAR(10) NOT NULL,
+CONSTRAINT profesores_num_empleado_pk PRIMARY KEY(num_empleado));
+
+INSERT INTO profesores
+VALUES ('0123456789',"Profesor", "Jirafales","0123456789");
+
+CREATE TABLE examenes(
+matricula CHAR(10) NOT NULL,
+clave_uea CHAR(7) NOT NULL,
+fecha_exam DATE NOT NULL,
+calificacion FLOAT(1) NOT NULL,
+CONSTRAINT examenes_matricula_fk FOREIGN KEY (matricula) REFERENCES alumnos(matricula),
+CONSTRAINT examenes_clave_uea_fk FOREIGN KEY (clave_uea) REFERENCES materias(clave_uea),
+CONSTRAINT examenes_matricula_clave_pk PRIMARY KEY(matricula, clave_uea)
+);
+
+INSERT INTO examenes
+VALUES ('2163010537','2131101', CURDATE(),10.00);
+
+SELECT examenes.matricula, a.nombre, a.apellido, examenes.clave_uea,m.nombre,examenes.fecha_exam, examenes.calificacion
+FROM examenes
+INNER JOIN  alumnos a ON examenes.matricula = a.matricula
+INNER JOIN  materias m ON examenes.clave_uea = m.clave_uea
+; 

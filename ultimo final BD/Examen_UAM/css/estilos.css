@@ -1,0 +1,89 @@
+.elementos-navbar{
+    display: block;
+    margin: auto;
+}
+.nav-link{
+    margin: 1.5rem;
+}
+.navbar img{
+    width: 3rem;
+}
+.caja{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.caja div{
+    width: 50%;
+}
+.caja img{
+    width:90%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+footer{
+    text-align: center;
+}
+footer p{
+    color: aliceblue;
+    padding-top: 2rem;
+}
+footer div{
+    display: block;
+    margin: auto;
+}
+footer .navbar img{
+    width: 3rem;
+    margin: 1rem;
+}
+h2 {
+    text-align: center;
+}
+.ingresar {
+    display: block;
+    margin: auto;
+}
+.ingresar form{
+    width: 60rem;
+}
+.boton button{
+    display: block;
+    margin: auto;
+}
+
+.logo-uam, .icon1{
+    display: block;
+    flex-direction: column;
+    margin: auto;
+}
+.ing, .reg {
+    padding: 1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.ing:hover, .reg:hover {
+    background:rgb(233, 236, 239);;
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+.icono-credencial{
+    height: 1.5rem;
+
+}
+input{
+    margin-right: 1rem;
+}
+.page{
+    padding-bottom: 20%;
+    padding-top: 20%;
+}
+.boton {
+    margin: 3rem;
+}
+.tituloE{
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}

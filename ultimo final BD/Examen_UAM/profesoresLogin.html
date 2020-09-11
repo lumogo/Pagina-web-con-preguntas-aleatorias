@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>alumnos.php</title>
+</head>
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger header">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="">
+            EXAMEN UAM-I
+        </a>
+        <div class="elementos-navbar">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="alumnosLogin.html">Alumnos</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Profesores <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="materias.php">Materias</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid caja">
+        <img src="img/alum-icon.png" alt="icono-alumno" class="img-fluid" alt="Responsive image" style="width: 12rem; height: 12rem;">
+        <div class="container">
+          <h1 class="display-3">Bienvenido Profesor</h1>
+          <p class="lead">Ingresa tu usuario y tu contraseña para poder consultar los resultados de los alumnos</p>
+        </div>
+      </div>
+  
+    <section class="container">
+        <form id="ingresar" class="ing" method ="post" Action="profesores.php">
+            <div class="ingresar col-md-3 mb-3">
+                <h2>Ingresar</h2>
+                <div class="form-group">
+                    <label for="validationTooltipUsername">Matricula</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                          <img class="icono-credencial" src="img/clavet.jpg" alt="">
+                        </span>
+                      </div>
+                      <input name="user" type="text" class="form-control" id="validationTooltipUsername" placeholder="Clave de Trabajo" aria-describedby="validationTooltipUsernamePrepend" pattern="[0-9]{10}" required>
+                      <div class="invalid-tooltip">
+                        Please choose a unique and valid username.
+                      </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contraseña</label>
+                  <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                </div>
+                <div class="boton">
+                    <button type="submit" class="btn btn-danger">Ingresar</button>
+                </div>
+                  
+            </div>
+        </form>
+    </section>
+
+ 
+    <footer class="bg-danger">
+      <p>Derechos Reservados &copy2019</p>
+      <nav class="navbar sticky-bottom navbar-expand-lg navbar navbar-dark">
+          <div>
+            <a href="https://www.facebook.com/uam.mx/" target="blank">
+                <img src="img/fb-logo.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/instauam/" target="blank">
+                <img src="img/ig-logo.png" alt="">
+            </a>
+            <a href="https://twitter.com/Yo_SoyUAM" target="blank">
+                <img src="img/tw-logo.png" alt="">
+            </a>
+          </div>
+
+      </nav>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
